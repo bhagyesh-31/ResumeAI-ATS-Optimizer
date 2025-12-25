@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeAI – AI-Powered ATS Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+<a href="index.html" style="text-decoration: none;">
+    <div class="logo">
+        <div class="logo-icon">✨</div>
+        <span>ResumeAI</span>
+    </div>
+</a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#job-desc">Job Desc</a></li>
+                    <li><a href="#results">Results</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>ResumeAI</h1>
+            <div class="subtitle">AI-Powered ATS Optimizer</div>
+            <div class="tagline">Beat the ATS & Land Your Dream Job</div>
+            <p class="description">
+                Get your resume past Applicant Tracking Systems (ATS) with data-driven insights. 
+                Analyze keyword matches, improve content, and optimize formatting to increase your 
+                chances of landing an interview. Our AI scanner compares your resume against job 
+                descriptions to ensure maximum keyword alignment and ATS compatibility.
+            </p>
+        </section>
+<!-- HOW IT WORKS INFOGRAPHIC -->
+<section class="process-section">
+    <h2 class="process-title">How ResumeAI Works</h2>
+    <p class="process-subtitle">
+        Simple 4-step process to optimize your resume for ATS
+    </p>
+
+    <div class="process-container">
+
+        <!-- STEP 1 -->
+        <div class="process-step">
+            <div class="process-circle gradient-1">
+                📄
+                <span class="step-number">1</span>
+            </div>
+            <h3>Paste Resume</h3>
+            <p>Provide your resume content for structured analysis</p>
+        </div>
+
+        <div class="process-line"></div>
+
+        <!-- STEP 2 -->
+        <div class="process-step">
+            <div class="process-circle gradient-2">
+                🎯
+                <span class="step-number">2</span>
+            </div>
+            <h3>Add Job Description</h3>
+            <p>Provide the job description you are applying for</p>
+        </div>
+
+        <div class="process-line"></div>
+
+        <!-- STEP 3 -->
+        <div class="process-step">
+            <div class="process-circle gradient-3">
+                🤖
+                <span class="step-number">3</span>
+            </div>
+            <h3>Logical Analysis</h3>
+            <p>System compares keywords, skills, and formatting using predefined rules</p>
+        </div>
+
+        <div class="process-line"></div>
+
+        <!-- STEP 4 -->
+        <div class="process-step">
+            <div class="process-circle gradient-4">
+                📊
+                <span class="step-number">4</span>
+            </div>
+            <h3>ATS Compatibility Report</h3>
+            <p>View match score, missing keywords, and improvement suggestions</p>
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- MAIN CONTENT WRAPPER -->
+        <div class="content-wrapper">
+            <!-- RESUME INPUT -->
+            <section class="input-section" id="resume">
+                <h2>
+                    <div class="section-icon">📄</div>
+                    Your Resume
+                </h2>
+                <p>Paste your complete resume text or content below</p>
+                <textarea 
+                    id="resumeInput" 
+                    placeholder="Paste your resume content here... Include your work experience, skills, education, and achievements."
+                ></textarea>
+            </section>
+
+            <!-- JOB DESCRIPTION INPUT -->
+            <section class="input-section" id="job-desc">
+                <h2>
+                    <div class="section-icon">🎯</div>
+                    Job Description
+                </h2>
+                <p>Paste the job description you're applying for</p>
+                <textarea 
+                    id="jobDescInput" 
+                    placeholder="Paste the job description you're applying for... Include the job title, responsibilities, required skills, and qualifications."
+                ></textarea>
+            </section>
+
+            <!-- ACTION BUTTONS -->
+            <div class="button-container">
+                <button class="btn btn-primary" id="analyzeBtn">
+                    <span>🔍</span> Analyze Resume
+                </button>
+                <button class="btn btn-secondary" id="clearBtn">
+                    <span>🔄</span> Clear All
+                </button>
+            </div>
+
+            <!-- RESULTS SECTION -->
+            <div class="results-section" id="results">
+                <!-- ATS SCORE CARD -->
+                <div class="score-card" id="scoreCard">
+                    <div class="score-label">ATS Compatibility Score</div>
+                    <div class="score-value" id="scoreValue">0%</div>
+                    <div class="score-text" id="scoreText">No analysis yet</div>
+                    <div class="score-description" id="scoreDescription">
+                        Analyze your resume to get started
+                    </div>
+                </div>
+
+                <!-- TABS -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="keywords">
+                        <span>🏷️</span> Keyword Match
+                    </button>
+                    <button class="tab" data-tab="suggestions">
+                        <span>💡</span> Smart Suggestions
+                    </button>
+                    <button class="tab" data-tab="formatting">
+                        <span>✅</span> Formatting Tips
+                    </button>
+                </div>
+
+                <!-- KEYWORDS TAB -->
+                <div class="tab-content active" id="keywords-tab">
+                    <h3 style="margin-bottom: 20px; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                        <span>🎯</span> Keyword Analysis
+                    </h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--success);">✓</span> Matched Keywords
+                        </h4>
+                        <div class="keyword-grid" id="matchedKeywords">
+                            <div class="empty-state">
+                                <div class="empty-state-text">No keywords matched yet</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--error);">✗</span> Missing Keywords
+                        </h4>
+                        <div class="keyword-grid" id="missingKeywords">
+                            <div class="empty-state">
+                                <div class="empty-state-text">Add these keywords to improve your ATS score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUGGESTIONS TAB -->
+                <div class="tab-content" id="suggestions-tab">
+                    <h3 style="margin-bottom: 20px; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                        <span>💡</span> Smart Suggestions
+                    </h3>
+                    <div class="suggestions-list" id="suggestionsList">
+                        <div class="empty-state">
+                            <div class="empty-state-text">No suggestions available yet</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMATTING TAB -->
+                <div class="tab-content" id="formatting-tab">
+                    <h3 style="margin-bottom: 20px; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                        <span>✅</span> Formatting & Best Practices
+                    </h3>
+                    <div class="suggestions-list" id="formattingTips">
+                        <div class="suggestion-item formatting">
+                            <div class="suggestion-title">📋 Use Standard Formatting</div>
+                            <div class="suggestion-text">
+                                Stick to simple, clean formatting. Avoid tables, columns, graphics, and special characters that ATS systems struggle to parse.
+                            </div>
+                        </div>
+                        <div class="suggestion-item formatting">
+                            <div class="suggestion-title">🔤 Use Standard Fonts</div>
+                            <div class="suggestion-text">
+                                Stick to common fonts like Arial, Calibri, or Times New Roman. Fancy fonts may not parse correctly in ATS systems.
+                            </div>
+                        </div>
+                        <div class="suggestion-item formatting">
+                            <div class="suggestion-title">📞 Include Clear Contact Info</div>
+                            <div class="suggestion-text">
+                                Ensure your name, email, phone number, and LinkedIn URL are clearly visible at the top of your resume.
+                            </div>
+                        </div>
+                        <div class="suggestion-item formatting">
+                            <div class="suggestion-title">🏷️ Use Standard Section Headings</div>
+                            <div class="suggestion-text">
+                                Use clear, standard headings: Experience, Skills, Education, Projects, Certifications. Avoid creative or unconventional names.
+                            </div>
+                        </div>
+                        <div class="suggestion-item formatting">
+                            <div class="suggestion-title">📄 Save as PDF or DOCX</div>
+                            <div class="suggestion-text">
+                                Save your final resume as PDF or DOCX format. Avoid image-based formats that ATS systems cannot parse.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+<p>
+    ResumeAI © 2025 |
+    <a href="footer_pages.html/privacy.html">Privacy Policy</a> •
+ 
+    <a href="footer_pages.html/Contact_Us.html">Contact Us</a>
+</p>
+
+        <p style="margin-top: 10px; opacity: 0.8;">
+            AI-powered resume analysis for job seekers. Beat the ATS and land your dream job.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
