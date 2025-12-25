@@ -4,6 +4,38 @@ ResumeAI is a rule-based ATS (Applicant Tracking System) resume analyzer built u
 It helps job seekers evaluate how well their resume matches a job description using keyword analysis and ATS-friendly logic.
 
 ---
+## 🌐 Live Demo
+🔗(https://resume-ats-optimizer-bvb.netlify.app/)
+---
+---
+
+## 🖼️ Screenshots (Application Flow)
+
+### 🔹 Home Page
+![Home Page](Screenshots/home_page.png)
+
+---
+
+### 🔹 How It Works – Guide
+![How It Works](Screenshots/guide_how_it_works.png)
+
+---
+
+### 🔹 Analyze Resume Screen
+![Analyze Resume](Screenshots/Analyze_Resume.png)
+
+---
+
+### 🔹 ATS Score Result – View 1
+![ATS Score](Screenshots/ATS_Score.png)
+
+---
+
+### 🔹 ATS Score Result – View 2
+![ATS Score Detailed](Screenshots/ATS_Score2.png)
+
+---
+---
 
 ## 🚀 Features
 - Resume vs Job Description comparison
@@ -44,5 +76,3 @@ User data is processed temporarily in the browser and is not stored or shared.
 
 ---
 
-## 🌐 Live Demo
-🔗(https://resume-ats-optimizer-bvb.netlify.app/)
